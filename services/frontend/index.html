@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        pre {
+            font-family: Arial;
+            margin: 0px;
+        } 
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>What are we cooking today? 🍴</h2>
+        <div class="search-container">
+            <input type="text" id="query" placeholder="Enter ingredients (e.g., strawberry 🍓)">
+            <button id="clear-button" onclick="clearSearch()">Clear</button>
+        </div>       
+        
+        
+        <div class="slider-container">
+            <span class="label keyword-label"><pre>keyword</pre><pre>search only</pre></span>
+            <input type="range" id="alpha" name="alpha" min="0" max="1" step="0.01" value="0.5" oninput="updateAlphaValue(this.value)">
+            <span class="label keyword-label"><pre>vector</pre><pre>search only</pre></span>
+            <div class="popup" onclick="myFunction()"> ℹ️ 
+                <span class="popuptext" id="myPopup">Move the slider if you want to favor the keyword component or the vector component.</span>
+              </div> 
+            <span class="slider-value" id="slider-value">0.5</span>
+        </div>
+        
+        
+        <button onclick="sendQuery()">Let's find a recipe! I'm hungry!</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

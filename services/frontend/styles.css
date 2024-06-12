@@ -1,0 +1,171 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    display: flex; /* Use Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    color: white; /* Default text color to white */
+}
+
+body {
+    background-image: url('./food.png');
+    background-size: cover; /* Make sure the image covers the entire background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image */
+}
+
+.container {
+    max-width: 800px; /* Increase the max-width for a larger container */
+    margin: 0 auto;
+    padding: 40px; /* Increase the padding for more space inside the container */
+    background-color: rgba(0, 0, 0, 0.5); /* Optional: Add a semi-transparent background to make text readable */
+    border-radius: 10px; /* Optional: Add border radius for rounded corners */
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 2.5em; /* Increase the font size */
+}
+
+h2 {
+    text-align: center;
+    color: white; /* Increase the font size */
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.2em; /* Increase the font size */
+}
+
+input[type="text"],
+input[type="range"],
+button {
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 1.2em; /* Increase the font size */
+    padding: 10px; /* Increase padding for larger input fields */
+}
+
+.slider-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%; /* Adjust the width of the container as needed */
+    margin-bottom: 20px; /* Add margin to separate from other elements */
+}
+
+input[type="range"] {
+    flex: 1; /* Expand to fill available space */
+    width: 100%; /* Set the width to 100% */
+}
+
+.slider-value {
+    position: absolute;
+    top: -20px; /* Adjust the top position as needed */
+    left: 45%;
+    transform: translateX(-50%);
+    font-size: 1.2em; /* Increase the font size */
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+.keyword-label {
+    text-align: center; /* Center-align the text */
+    font-size: 1.2em; /* Adjust the font size as needed */
+    padding: 0%;
+    font-family: Arial, sans-serif; /* Change the font family */
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    padding-top: 0%;
+    padding-bottom: 5%;
+}
+
+#search-input {
+    flex: 1; /* Expand to fill available space */
+    margin-right: 10px; /* Add spacing between input and button */
+    font-size: 1.2em; /* Increase the font size */
+    padding: 10px ; /* Increase padding for larger input fields */
+}
+
+#clear-button {
+    padding: 10px 10px; /* Add padding to the button */
+    font-size: 1.2em; /* Increase the font size */
+    cursor: pointer; /* Change cursor on hover */
+    width: 15%;
+}
+
+li a{color:white}
+
+/* Popup container */
+.popup {
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    padding: 20px;
+    font-size: 1.2em; /* Adjust the font size as needed */
+}
+
+/* The actual popup (appears on top) */
+.popup .popuptext {
+    text-align: center;
+    visibility: hidden;
+    width: 200px; /* Increase the width of the popup */
+    background-color: #555;
+    color: #fff;
+    border-radius: 6px;
+    padding: 10px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -100px; /* Adjust for the increased width */
+}
+
+/* Popup arrow */
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+/* Toggle this class when clicking on the popup container (hide and show the popup) */
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+.recipe a {
+    color: white; /* Set the color to white */
+    text-decoration: none; /* Remove underline */
+}
